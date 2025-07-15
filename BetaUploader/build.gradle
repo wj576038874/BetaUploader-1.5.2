@@ -1,0 +1,26 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+//apply from: '../bintray.gradle'
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+    implementation 'com.upyun:java-sdk:4.0.1'
+    implementation 'junit:junit:4.12'
+}
+
+repositories {
+    mavenCentral()
+}
+group = 'com.github.joyrun'
+version = '1.5.2'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri('../repo'))
+        }
+    }
+}
+
+
