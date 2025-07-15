@@ -22,7 +22,7 @@ public class BetaPlugin implements Plugin<Project> {
     @Override
     void apply(Project project) {
 
-        println("####start######")
+        println("####start1.5.3######")
 
         this.project = project
         // 接收外部参数
